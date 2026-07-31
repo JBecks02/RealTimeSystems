@@ -25,5 +25,24 @@ BELOW IS THE APPLICATION SYSTEM ARCHITECTURE DIAGRAM
 
 
 TASK TABLE
+'''
+| Task                                | Priority |   Core  | Period / Trigger          | Synchronization Used                       | Purpose                                                                           |
+| ----------------------------------- | :------: | :-----: | ------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------- |
+| **Responder Task**                  |  **12**  | APP_CPU | Event-driven (button ISR) | **Binary Semaphore**                       | Waits for the ISR to signal a radar/collision event and processes it immediately. |
+| **Pool Consumer 1**                 |   **5**  | APP_CPU | Continuous                | **Counting Semaphore**                     | Acquires one of three available communication channels before transmitting.       |
+| **Pool Consumer 2**                 |   **5**  | APP_CPU | Continuous                | **Counting Semaphore**                     | Same as Consumer 1.                                                               |
+| **Pool Consumer 3**                 |   **5**  | APP_CPU | Continuous                | **Counting Semaphore**                     | Same as Consumer 1.                                                               |
+| **Pool Consumer 4**                 |   **5**  | APP_CPU | Continuous                | **Counting Semaphore**                     | Demonstrates resource contention because four tasks share only three channels.    |
+| **Flight Data Writer 1**            |   **8**  | APP_CPU | ~223 ms                   | **Mutex** (or none during induced failure) | Updates the shared flight-state counter safely.                                   |
+| **Flight Data Writer 2**            |   **8**  | APP_CPU | ~296 ms                   | **Mutex** (or none during induced failure) | Concurrently updates the same shared flight-state counter.                        |
+| **Priority Inversion – High (H)**   |  **15**  | APP_CPU | One-shot after 50 ms      | **Mutex / Binary Semaphore**               | Attempts to acquire the shared lock and measures wait time.                       |
+| **Priority Inversion – Medium (M)** |  **10**  | APP_CPU | One-shot after 100 ms     | None                                       | CPU-intensive interference task demonstrating priority inversion.                 |
+| **Priority Inversion – Low (L)**    |   **5**  | APP_CPU | Starts immediately        | **Mutex / Binary Semaphore**               | Holds the shared lock while executing a long CPU-bound critical section.          |
+
+ADDED FOR CAPSTONE
+| Task           | Priority |   Core  |    Period   | Purpose                                                                                                       |
+| -------------- | :------: | :-----: | :---------: | ------------------------------------------------------------------------------------------------------------- |
+| Dashboard Task |   **1**  | APP_CPU | **2000 ms** | Displays resource utilization, semaphore usage, task activity, ISR counts, and priority inversion statistics. |
+'''
 
 
