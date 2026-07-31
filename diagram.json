@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "author": "EEE 4775 scaffold - aviation dashboard",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {
+        "builder": "esp-idf"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_event",
+      "top": 179,
+      "left": -153.6,
+      "attrs": {
+        "color": "blue",
+        "label": "EVENT"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "heartbeat_led",
+      "top": -76.8,
+      "left": 211.2,
+      "attrs": {
+        "color": "green",
+        "label": "SYSTEM HEARTBEAT"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "heartbeat_resistor",
+      "top": -19.2,
+      "left": 216,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "btn_event:1.l",
+      "esp:18",
+      "blue",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "btn_event:2.r",
+      "esp:GND.1",
+      "black",
+      [
+        "v10",
+        "h-50"
+      ]
+    ],
+    [
+      "esp:2",
+      "heartbeat_led:A",
+      "green",
+      [
+        "h45",
+        "v-30"
+      ]
+    ],
+    [
+      "heartbeat_led:C",
+      "heartbeat_resistor:1",
+      "black",
+      [
+        "v10"
+      ]
+    ],
+    [
+      "heartbeat_resistor:2",
+      "esp:GND.2",
+      "black",
+      [
+        "v20",
+        "h-45"
+      ]
+    ]
+  ],
+  "serialMonitor": {
+    "display": "terminal"
+  },
+  "dependencies": {}
+}
