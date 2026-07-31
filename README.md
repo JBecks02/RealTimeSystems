@@ -45,4 +45,8 @@ ADDED FOR CAPSTONE
 | Dashboard Task |   **1**  | APP_CPU | **2000 ms** | Displays resource utilization, semaphore usage, task activity, ISR counts, and priority inversion statistics. |
 '''
 
+FINAL REFLECTION:
+
+This project was one that reinforced the topics learned throughout EEE4775, that includes but are not limited to processing system architecture in an operating system governed enviornment where threads have the ability to preempt and take control of our system's resources. As mentioned in the project overview, we used semaphores, mutexes, and ISRs to achieve this functionality. The CAPSTONES added feature of graphical resource managemnt i think, is something any embedded engineer can take from, as understanding how and when resources would be utilized at the millisecond range is extremely hard to imagine and understand without a full picture. The effect of difficult understanding of RTOS and resource management is something I think is inherently baked into the ideas of what it means to "operate" in an embedded environment that uses FreeRTOS, and why I chose to add this functionality to APP4 to submit as my capstone project. The most valuable thing I can take away from this project is the lesson of breaking down extremely compact and dense lines of logic, to then trace back and re-assemble into a much easier-to-digest package. Anytime you are able to start from the high level, walk down to the fundamentals of what is happening in a system and rebuild that answer, you gain so much insight into the detail of how that system works.
+
 
