@@ -3,6 +3,9 @@
 # RealTimeSystems
 Final Project for real-time systems, using an ESP-32 dual-core to mimic an avionics control system.
 
+YouTube Demo link: https://youtu.be/WJ2yD7cto4M
+Wowki Link: https://wokwi.com/projects/469984409971783681
+
 
 ## PROJECT OVERVIEW ##
 This capstone project's main system is the code from APP4, in which we implemented synchronization techniques to achieve our deadlines. APP4 used the following,
