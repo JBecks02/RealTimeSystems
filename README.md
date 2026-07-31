@@ -19,4 +19,7 @@ BELOW IS AN EXAMPLE OF THE RESOURCE PRINT OUT
 
 <img width="484" height="514" alt="Screenshot 2026-07-31 at 8 10 10 AM" src="https://github.com/user-attachments/assets/ee847481-6003-4a16-b58e-396d18915fbc" />
 
+BELOW IS THE APPLICATION SYSTEM ARCHITECTURE DIAGRAM
+
+<img width="521" height="671" alt="Untitled Diagram drawio (21)" src="https://github.com/user-attachments/assets/158eaa7a-91ba-4715-9528-6f5b9c00cb7f" />
 
