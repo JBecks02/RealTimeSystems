@@ -17,30 +17,6 @@ Also note that we demonstrated priority inversion, which is shown in the standar
 
 BELOW IS AN EXAMPLE OF THE RESOURCE PRINT OUT
 
-+================================================================+
-|              AVIATION RESOURCE UTILIZATION DASHBOARD           |
-+================================================================+
-| Uptime:    12480 ms | Core: 1 | Lock: PI mutex                |
-+----------------------------------------------------------------+
-| RADIO CHANNEL POOL                                             |
-| Busy [#############-------] 2/3 ( 66%) | Free: 1 | Peak: 3/3 |
-+----------------------------------------------------------------+
-| ACTIVITY DURING LAST 2000 ms                                   |
-| Radio 1  [############--------]   3 acquisitions | timeouts: 0 |
-| Radio 2  [####################]   5 acquisitions | timeouts: 0 |
-| Radio 3  [########------------]   2 acquisitions | timeouts: 1 |
-| Radio 4  [################----]   4 acquisitions | timeouts: 2 |
-| Writer 1 [####################]  10 updates | stack free: 2056 |
-| Writer 2 [################----]   8 updates | stack free: 2072 |
-+----------------------------------------------------------------+
-| SYNCHRONIZATION HEALTH                                         |
-| Radar ISR events: 6 (+1) | handled: 6                          |
-| Writer attempts: 105 | shared counter: 101 | lost: 4           |
-| Mutex protection: OFF | race indicator: WARNING                |
-+----------------------------------------------------------------+
-| PRIORITY INVERSION TELEMETRY                                   |
-| H wait: 123456 us | L hold: 511223 us | M run: 984331 us       |
-+----------------------------------------------------------------+
-| Heartbeat GPIO 2: ON | Responder stack free: 2136              |
-+================================================================+
+<img width="484" height="514" alt="Screenshot 2026-07-31 at 8 10 10 AM" src="https://github.com/user-attachments/assets/ee847481-6003-4a16-b58e-396d18915fbc" />
+
 
