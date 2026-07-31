@@ -21,5 +21,6 @@ BELOW IS AN EXAMPLE OF THE RESOURCE PRINT OUT
 
 BELOW IS THE APPLICATION SYSTEM ARCHITECTURE DIAGRAM
 
-<img width="521" height="671" alt="Untitled Diagram drawio (21)" src="https://github.com/user-attachments/assets/158eaa7a-91ba-4715-9528-6f5b9c00cb7f" />
+<img width="521" height="671" alt="Untitled Diagram drawio (22)" src="https://github.com/user-attachments/assets/fc660c9a-a7a6-4329-b088-8544f3a64711" />
+
 
